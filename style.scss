@@ -12,12 +12,12 @@ body{
     left: 0;
     z-index: 999;
     &.topBar{
-        animation: slideRight 0.5s linear;
+        animation: slideRight 1s linear;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
     }
     &.bottomBar{
-        animation: slideLeft 0.5s linear;
+        animation: slideLeft 1s linear;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
     }

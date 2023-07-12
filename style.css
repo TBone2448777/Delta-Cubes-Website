@@ -15,12 +15,12 @@ body {
   z-index: 999;
 }
 .sliderBars.topBar {
-  animation: slideRight 0.5s linear;
+  animation: slideRight 1s linear;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
 .sliderBars.bottomBar {
-  animation: slideLeft 0.5s linear;
+  animation: slideLeft 1s linear;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }

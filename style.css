@@ -1,5 +1,5 @@
 h1 {
-  color: green;
+  position: fixed;
 }
 
 body {
@@ -12,16 +12,26 @@ body {
   height: 50vh;
   position: fixed;
   left: 0;
-  animation: slideRight 1s linear infinite;
+  z-index: 999;
+}
+.sliderBars.topBar {
+  animation: slideRight 0.5s linear;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
 }
-.sliderBars .topBar {
-  background-color: green;
+.sliderBars.bottomBar {
+  animation: slideLeft 0.5s linear;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
 }
 
 @keyframes slideRight {
   to {
-    transform: translateX(100%);
+    transform: translateX(200%);
+  }
+}
+@keyframes slideLeft {
+  to {
+    transform: translateX(-200%);
   }
 }/*# sourceMappingURL=style.css.map */

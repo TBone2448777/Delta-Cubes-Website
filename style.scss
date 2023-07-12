@@ -9,14 +9,15 @@ body{
     background-color: #000030;
     height: 50vh;
     position: fixed;
-    left: 0;
     z-index: 999;
     &.topBar{
+        background-image: url("images/denim.jpg");
         animation: slideRight 1s linear;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);
     }
     &.bottomBar{
+        background-image: url("images/circuit board.jpg");
         animation: slideLeft 1s linear;
         animation-play-state: paused;
         animation-delay: calc(var(--scroll) * -1s);

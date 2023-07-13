@@ -8,8 +8,20 @@
         <body>
             <div class="sliderBars topBar" style="top:0; left:0;"></div>
             <div class="sliderBars bottomBar" style="bottom:0; left:0;"></div>
-            <div class="firstBlock">
-                <h1>DELTA<br>CUBES</h1>
+            <div class="firstBlockContainer">
+                <div class="firstBlock" style="display: flex;">
+                    <div class="left">
+                        <div class="top">
+                            <h1 style="position: absolute; bottom:0;">DELTA</h1>
+                        </div>
+                        <div class="bottom">
+                            <h1 style="position: absolute; top:0;">CUBES</h1>
+                        </div>>
+                    </div>
+                    <div class="right">
+                        <img src="images/theCube.svg"/>
+                    </div>
+                </div>
             </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </body>
@@ -18,5 +30,6 @@
         window.addEventListener('scroll', () => {
             document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
             document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
+            document.getElementsByClassName("firstBlock")[0].style.top=window.pageYOffset+"px";
         }, false);
     </script>

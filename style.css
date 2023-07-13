@@ -16,12 +16,65 @@ body {
   background-image: url("images/circuit board.jpg");
 }
 
-.firstBlock {
+.firstBlockContainer {
   position: relative;
   height: 150vh;
-  background-color: red;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
 }
-.firstBlock h1 {
+.firstBlockContainer .firstBlock {
+  background-color: #636363;
   position: absolute;
   top: 0;
+  width: 100%;
+}
+.firstBlockContainer .firstBlock .left {
+  height: 100vh;
+  width: 50%;
+}
+.firstBlockContainer .firstBlock .right {
+  height: 100vh;
+  width: 50%;
+}
+.firstBlockContainer .firstBlock .top {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+}
+.firstBlockContainer .firstBlock .bottom {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  display: flex;
+}
+.firstBlockContainer .firstBlock h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-size: 15vw;
+  display: flex;
+  margin: 0px;
+}
+
+@media only screen and (max-width: 800px) {
+  .firstBlockContainer .firstBlock .left {
+    height: 50vh;
+    width: 100%;
+  }
+  .firstBlockContainer .firstBlock .right {
+    height: 50vh;
+    width: 100%;
+  }
+  .firstBlockContainer .firstBlock .top {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    justify-content: center;
+  }
+  .firstBlockContainer .firstBlock .bottom {
+    width: 100%;
+    height: 25vh;
+    position: relative;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */

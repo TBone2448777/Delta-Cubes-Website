@@ -8,13 +8,15 @@
         <body>
             <div class="sliderBars topBar" style="top:0; left:0;"></div>
             <div class="sliderBars bottomBar" style="bottom:0; left:0;"></div>
-            <h1>DELTA<br>CUBES</h1>
+            <div class="firstBlock">
+                <h1>DELTA<br>CUBES</h1>
+            </div>
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         </body>
     </html>
     <script>
         window.addEventListener('scroll', () => {
-            console.log(window.pageYOffset)
-            // console.log(document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight)))
+            document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
+            document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
         }, false);
     </script>

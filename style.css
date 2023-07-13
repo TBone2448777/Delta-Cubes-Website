@@ -1,7 +1,3 @@
-h1 {
-  position: fixed;
-}
-
 body {
   background-color: #1f1f1f;
 }
@@ -15,24 +11,17 @@ body {
 }
 .sliderBars.topBar {
   background-image: url("images/denim.jpg");
-  animation: slideRight 1s linear;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
 }
 .sliderBars.bottomBar {
   background-image: url("images/circuit board.jpg");
-  animation: slideLeft 1s linear;
-  animation-play-state: paused;
-  animation-delay: calc(var(--scroll) * -1s);
 }
 
-@keyframes slideRight {
-  to {
-    transform: translateX(200%);
-  }
+.firstBlock {
+  position: relative;
+  height: 150vh;
+  background-color: red;
 }
-@keyframes slideLeft {
-  to {
-    transform: translateX(-200%);
-  }
+.firstBlock h1 {
+  position: absolute;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */

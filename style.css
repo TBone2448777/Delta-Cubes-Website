@@ -36,6 +36,10 @@ body {
 .firstBlockContainer .firstBlock .right {
   height: 100vh;
   width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .firstBlockContainer .firstBlock .top {
   width: 100%;
@@ -55,14 +59,21 @@ body {
   display: flex;
   margin: 0px;
 }
+.firstBlockContainer .firstBlock .theCube {
+  width: 80%;
+}
 
 @media only screen and (max-width: 800px) {
+  .firstBlockContainer .firstBlock {
+    display: flex;
+    flex-direction: column;
+  }
   .firstBlockContainer .firstBlock .left {
-    height: 50vh;
+    height: 25vh;
     width: 100%;
   }
   .firstBlockContainer .firstBlock .right {
-    height: 50vh;
+    height: 75vh;
     width: 100%;
   }
   .firstBlockContainer .firstBlock .top {
@@ -76,5 +87,13 @@ body {
     height: 25vh;
     position: relative;
     justify-content: center;
+  }
+  .firstBlockContainer .firstBlock .theCube {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .firstBlockContainer .firstBlock .theCube {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

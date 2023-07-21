@@ -1,38 +1,29 @@
-<?xml version="1.0" standalone="no"?><svg width="1080" height="1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <style></style>
-    <g transform="translate(-240, -60)">
-        <defs>
-            <pattern id="pattern_bg" viewBox="0 0 60 60" width="0.03556609365737996" height="0.05982053838484546" patternTransform="scale(0.5 0.5) translate(843.5 501.5)">
-                <line class="bg" x1="0" y1="0" x2="60" y2="0"></line>
-                <line class="bg" x1="0" y1="0" y2="60" x2="0"></line>
-                <line class="bg-sub" x1="0" y1="15" x2="60" y2="15"></line>
-                <line class="bg-sub" y1="0" x1="15" y2="60" x2="15"></line>
-                <line class="bg-sub" x1="0" y1="30" x2="60" y2="30"></line>
-                <line class="bg-sub" y1="0" x1="30" y2="60" x2="30"></line>
-                <line class="bg-sub" x1="0" y1="45" x2="60" y2="45"></line>
-                <line class="bg-sub" y1="0" x1="45" y2="60" x2="45"></line>
-            </pattern>
-        </defs>
-        <g class="bg">
-            <rect x="-843.5" y="-501.5" width="3374" height="2006" style="fill: url(&quot;#pattern_bg&quot;);">
-            </rect>
-        </g>
-        <g class="u current" data-layer="Layer 1" style="visibility: visible;">
-            <path d="M 780 960 L 420 840 L 420 360 L 780 240 L 1140 360 L 1140 840 Z" class="" stroke="rgba(41, 173, 255, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 780 240 L 780 720 L 1140 840 Z" class="" stroke="rgba(41, 173, 255, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 780 240 L 1140 840 L 780 720 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(194, 195, 199); stroke-width: 2;"></path>
-            <path d="M 780 240 L 1140 360 L 1140 840 L 780 960 L 420 840 L 420 360 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 780 240 Z" class="" stroke="rgba(255, 255, 255, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 780 240 L 420 840 L 780 720 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(194, 195, 199); stroke-width: 2;"></path>
-            <path d="M 780 240 L 1140 840 L 780 720 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(118, 118, 121); stroke-width: 2;"></path>
-            <path d="M 1140 360 L 900 435 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 420 360 L 660 435 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 780 240 L 1140 360 L 900 435 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(255, 255, 255); stroke-width: 2;"></path>
-            <path d="M 420 360 L 420 840 L 780 960 L 1140 840 L 1140 360 L 780 240 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(255, 255, 255); stroke-width: 2;"></path>
-            <path d="M 780 240 L 1140 840 L 780 720 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(118, 118, 121); stroke-width: 2;"></path>
-            <path d="M 420 840 L 780 720 L 780 240 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(194, 195, 199); stroke-width: 2;"></path>
-            <path d="M 1140 360 L 900 435 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-            <path d="M 660 435 L 420 360 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
-        </g>
-    </g>
+<?xml version="1.0" standalone="no"?>
+<svg width="370" height="370" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<style></style>
+	<g transform="translate(-475, -235)">
+		<defs>
+			<pattern id="pattern_bg" viewBox="0 0 60 60" width="0.03556609365737996" height="0.05982053838484546" patternTransform="scale(0.5 0.5) translate(843.5 501.5)">
+				<line class="bg" x1="0" y1="0" x2="60" y2="0"></line>
+				<line class="bg" x1="0" y1="0" y2="60" x2="0"></line>
+				<line class="bg-sub" x1="0" y1="15" x2="60" y2="15"></line>
+				<line class="bg-sub" y1="0" x1="15" y2="60" x2="15"></line>
+				<line class="bg-sub" x1="0" y1="30" x2="60" y2="30"></line>
+				<line class="bg-sub" y1="0" x1="30" y2="60" x2="30"></line>
+				<line class="bg-sub" x1="0" y1="45" x2="60" y2="45"></line>
+				<line class="bg-sub" y1="0" x1="45" y2="60" x2="45"></line>
+			</pattern>
+		</defs>
+		<g class="bg">
+			<rect x="-843.5" y="-501.5" width="3374" height="2006" style="fill: url(&quot;#pattern_bg&quot;);"></rect>
+		</g>
+		<g class="u current" data-layer="Layer 1" style="visibility: visible;">
+			<path d="M 480 300 L 480 540 Z" class="" stroke="rgba(41, 173, 255, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
+			<path d="M 480 300 L 480 540 L 660 600 L 840 540 L 840 300 L 660 240 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(255, 255, 255); stroke-width: 2;"></path>
+			<path d="M 480 300 L 660 360 L 840 300 L 660 360 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
+			<path d="M 480 540 L 660 480 L 840 540 L 660 480 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgba(0, 0, 0, 0); stroke-width: 2;"></path>
+			<path d="M 660 240 L 660 480 L 480 540 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(194, 195, 199); stroke-width: 2;"></path>
+			<path d="M 660 240 L 840 540 L 660 480 Z" class="" stroke="rgba(0, 0, 0, 1)" data-ti="" style="fill: rgb(123, 124, 127); stroke-width: 2;"></path>
+		</g>
+	</g>
 </svg>

@@ -6,14 +6,31 @@ body{
 .sliderBars{
     width: 100%;
     background-color: #000030;
-    height: 50%;
+    height: 50lvh;
     position: fixed;
     z-index: 999;
+    font-size: 200px;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
     &.topBar{
         background-image: url("images/denim.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        p{
+            margin: 0;
+        }
     }
     &.bottomBar{
         background-image: url("images/circuit board.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        p{
+            margin: 0;
+        }
     }
 }
 .firstBlockContainer{
@@ -41,13 +58,13 @@ body{
         }
         .top{
             width: 100%;
-            height: 50%;
+            height: 50lvh;
             position: relative;
             display: flex;
         }
         .bottom{
             width: 100%;
-            height: 50%;
+            height: 50lvh;
             position: relative;
             display: flex;
         }
@@ -60,6 +77,50 @@ body{
         .theCube{
             width:80%;
         }
+    }
+}
+.pfpContainer{
+    text-align: center;
+    .pfp{
+        margin: 30px 1% 30px 0;
+        width: 23.5%;
+        display: inline-block;
+        .pfpImages{
+            img{
+                width: 100%;
+            }
+        }
+        .pfpName{
+            text-align: center;
+            color: white;
+            font-family: Arial;
+            font-size: 25px;
+        }
+        .pfpDescriptor{
+            text-align: center;
+            color: white;
+            font-family: Arial;
+            font-size: 17px;
+        }
+    }
+}
+.whoContainer{
+    color: white;
+    text-align: center;
+    font-family: arial;
+    .whoHeader{
+        font-size: 50px;
+        margin: 10px;
+    }
+    .whoDescription{
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .sliderBars{
+        font-size: 125px;
+        -webkit-text-stroke-width: 2px;
     }
 }
 @media only screen and (max-width: 800px) {
@@ -77,13 +138,13 @@ body{
             }
             .top{
                 width: 100%;
-                height: 25%;
+                height: 25lvh;
                 position: relative;
                 justify-content: center;
             }
             .bottom{
                 width: 100%;
-                height: 25%;
+                height: 25lvh;
                 position: relative;
                 justify-content: center;
             }
@@ -92,6 +153,10 @@ body{
             }
         }
     }
+    .sliderBars{
+        font-size: 95px;
+        -webkit-text-stroke-width: 2px;
+    }
 }
 @media only screen and (max-width: 600px) {
     .firstBlockContainer {
@@ -99,6 +164,20 @@ body{
             .theCube{
                 width:100%;
             }
+        }
+    }
+    .sliderBars{
+        font-size: 68px;
+        -webkit-text-stroke-width: 1px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .pfpContainer{
+        text-align: center;
+        .pfp{
+            margin: 30px 1% 30px 0;
+            width: 48.5%;
+            display: inline-block;
         }
     }
 }

@@ -19,6 +19,8 @@ body{
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        position: fixed;
+        bottom: 50vh;
         p{
             margin: 0;
         }
@@ -29,6 +31,8 @@ body{
         display: flex;
         justify-content: center;
         align-items: flex-start;
+        position: fixed;
+        bottom: 0px;
         p{
             margin: 0;
         }

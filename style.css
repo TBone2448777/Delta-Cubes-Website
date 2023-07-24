@@ -5,7 +5,6 @@ body {
 .sliderBars {
   width: 100%;
   background-color: #000030;
-  height: 50lvh;
   position: fixed;
   z-index: 999;
   font-size: 200px;
@@ -15,6 +14,7 @@ body {
   text-align: center;
 }
 .sliderBars.topBar {
+  height: 50lvh;
   background-image: url("images/denim.jpg");
   display: flex;
   justify-content: center;
@@ -24,6 +24,7 @@ body {
   margin: 0;
 }
 .sliderBars.bottomBar {
+  height: 50lvh;
   background-image: url("images/circuit board.jpg");
   display: flex;
   justify-content: center;

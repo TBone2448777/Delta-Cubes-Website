@@ -167,7 +167,7 @@ body {
   }
   .sliderBars.bottomBar {
     height: 50svh;
-    top: 50px;
+    top: 50svh;
   }
 }
 @media only screen and (max-width: 600px) {

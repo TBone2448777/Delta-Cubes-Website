@@ -163,11 +163,11 @@ body{
         -webkit-text-stroke-width: 2px;
         &.topBar{
             height: 50svh;
-            bottom: 50svh;
+            top: 0svh;
         }
         &.bottomBar{
             height: 50svh;
-            bottom: 0px;
+            top: 50px;
         }
     }
 }

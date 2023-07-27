@@ -161,6 +161,14 @@ body {
     font-size: 95px;
     -webkit-text-stroke-width: 2px;
   }
+  .sliderBars.topBar {
+    height: 50svh;
+    bottom: 50svh;
+  }
+  .sliderBars.bottomBar {
+    height: 50svh;
+    bottom: 0px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .firstBlockContainer .firstBlock .theCube {

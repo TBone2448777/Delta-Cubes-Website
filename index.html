@@ -126,8 +126,14 @@
     </html>
     <script>
         window.addEventListener('scroll', () => {
-            document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
-            document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
-            document.getElementsByClassName("firstBlock")[0].style.top=window.pageYOffset+"px";
+            if (window.pageYOffset > 70){
+                document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
+                document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
+                document.getElementsByClassName("firstBlock")[0].style.top=window.pageYOffset+"px";
+            } else{
+                document.getElementsByClassName("bottomBar")[0].style.left=0;
+                document.getElementsByClassName("topBar")[0].style.left=0;
+                document.getElementsByClassName("firstBlock")[0].style.top=0;
+            }
         }, false);
     </script>

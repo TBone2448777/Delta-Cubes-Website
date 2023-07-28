@@ -189,4 +189,7 @@ body {
     width: 48.5%;
     display: inline-block;
   }
+  .pfpContainer .pfp .pfpName {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

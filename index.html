@@ -38,10 +38,10 @@
                         <img src="images/pfp/aaronpfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Aaron Q. Largent</p>
+                        <p>Aaron <span class="mInitial"></span>. Largent</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #16</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -49,10 +49,10 @@
                         <img src="images/pfp/abbypfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Abby F. Smith</p>
+                        <p>Abby <span class="mInitial"></span>. Smith</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #35</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -60,10 +60,10 @@
                         <img src="images/pfp/gavinpfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Gavin G. Gorrelle</p>
+                        <p>Gavin <span class="mInitial"></span>. Gorrelle</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #59</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -71,10 +71,10 @@
                         <img src="images/pfp/graciepfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Gracie Z. Limmer</p>
+                        <p>Gracie <span class="mInitial"></span>. Limmer</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #94</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -82,10 +82,10 @@
                         <img src="images/pfp/laydenpfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Layden V. Halcomb</p>
+                        <p>Layden <span class="mInitial"></span>. Halcomb</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #14</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -93,10 +93,10 @@
                         <img src="images/pfp/meghanpfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Meghan L. Strother</p>
+                        <p>Meghan <span class="mInitial"></span>. Strother</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #21</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -104,10 +104,10 @@
                         <img src="images/pfp/paigepfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Paige W. Warren</p>
+                        <p>Paige <span class="mInitial"></span>. Warren</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #46</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
                 <div class="pfp">
@@ -115,25 +115,40 @@
                         <img src="images/pfp/taylorpfp.jpg"/>
                     </div>
                     <div class="pfpName">
-                        <p>Taylor I. Sloan</p>
+                        <p>Taylor <span class="mInitial"></span>. Sloan</p>
                     </div>
                     <div class="pfpDescriptor">
-                        <p>Founding Member #17</p>
+                        <p>Founding Member #<span class="fNum"></span></p>
                     </div>
                 </div>
             </div>
         </body>
     </html>
     <script>
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+        }
+        var barHeight = 100
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 70){
-                document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
-                document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
-                document.getElementsByClassName("firstBlock")[0].style.top=window.pageYOffset+"px";
+            if (window.pageYOffset > barHeight){
+                document.getElementsByClassName("bottomBar")[0].style.left="-"+(window.pageYOffset-barHeight)*5+"px";
+                document.getElementsByClassName("topBar")[0].style.left=(window.pageYOffset-barHeight)*5+"px";
+                document.getElementsByClassName("firstBlock")[0].style.top=(window.pageYOffset-barHeight)+"px";
             } else{
                 document.getElementsByClassName("bottomBar")[0].style.left=0;
                 document.getElementsByClassName("topBar")[0].style.left=0;
                 document.getElementsByClassName("firstBlock")[0].style.top=0;
             }
         }, false);
+        var charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        window.addEventListener('load', (event) => {
+            Array.from(document.getElementsByClassName("mInitial")).forEach(function(element) {
+                element.innerHTML=charList[getRandomInt(0, 25)];
+            })
+            Array.from(document.getElementsByClassName("fNum")).forEach(function(element) {
+                element.innerHTML=getRandomInt(0, 100);
+            })
+        });
     </script>

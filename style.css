@@ -138,6 +138,7 @@ body {
 }
 
 .nftContainer {
+  cursor: default;
   width: calc(100% - 32px);
   height: 50vh;
   background-color: gray;
@@ -205,6 +206,7 @@ body {
   text-align: right;
 }
 .nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftButton {
+  cursor: pointer;
   float: right;
   margin-bottom: 10px;
   background-color: #1f1f1f;

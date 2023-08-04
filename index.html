@@ -122,6 +122,7 @@
                     </div>
                 </div>
             </div>
+            <br><br>
             <p class="nftMainTitle">Buy Our NFTS!</p>
             <div class="nftContainer">
                 <div id="nftLeftArrow" class="nftArrow">
@@ -209,7 +210,6 @@
                         cardList[pickedIndex].classList.remove("d-none");
                     }, cardList);
                     document.getElementById("nftRightArrow").addEventListener("click", ()=>{
-                        console.log(cardList);
                         cardList[pickedIndex].classList.add("d-none");
                         if (pickedIndex == cardList.length - 1){
                             pickedIndex = 0;

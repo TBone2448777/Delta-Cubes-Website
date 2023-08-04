@@ -1,5 +1,10 @@
 body {
   background-color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .sliderBars {
@@ -41,7 +46,7 @@ body {
 .firstBlockContainer {
   position: relative;
   height: 150lvh;
-  width: 100%;
+  width: calc(100% - 32px);
   left: 0;
   overflow: hidden;
 }
@@ -124,6 +129,93 @@ body {
   margin: 10px;
 }
 
+.nftContainer {
+  width: calc(100% - 32px);
+  height: 50vh;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.nftContainer #nftSlideShow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nftContainer #nftSlideShow .nftCard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftLeft {
+  width: 53%;
+  height: 100%;
+  padding-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nftContainer #nftSlideShow .nftCard .nftLeft img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight {
+  width: 43%;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight img {
+  width: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails p {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftTitle {
+  font-size: 16px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftSubTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftDescr {
+  font-size: 14px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftDescC {
+  flex-grow: 1;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftCost {
+  font-size: 40px;
+  text-align: right;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftButton {
+  float: right;
+  margin-bottom: 10px;
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+.nftContainer .nftArrow {
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
 @media only screen and (max-width: 1400px) {
   .sliderBars {
     font-size: 125px;
@@ -131,6 +223,20 @@ body {
   }
 }
 @media only screen and (max-width: 800px) {
+  .nftContainer {
+    height: 75vh;
+  }
+  .nftContainer #nftSlideShow .nftCard {
+    flex-direction: column;
+  }
+  .nftContainer #nftSlideShow .nftCard .nftLeft {
+    height: 50%;
+    width: 100%;
+  }
+  .nftContainer #nftSlideShow .nftCard .nftRight {
+    height: 50%;
+    width: 100%;
+  }
   .firstBlockContainer .firstBlock {
     display: flex;
     flex-direction: column;

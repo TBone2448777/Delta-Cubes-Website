@@ -46,7 +46,7 @@ body {
 .firstBlockContainer {
   position: relative;
   height: 150lvh;
-  width: calc(100% - 32px);
+  width: 100%;
   left: 0;
   overflow: hidden;
 }
@@ -205,10 +205,16 @@ body {
   font-size: 40px;
   text-align: right;
 }
-.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftButton {
-  cursor: pointer;
-  float: right;
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails a {
+  align-self: flex-end;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
   margin-bottom: 10px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails a .nftButton {
+  cursor: pointer;
   background-color: #1f1f1f;
   color: white;
   border: 1px black solid;
@@ -224,6 +230,9 @@ body {
   color: white;
   font-weight: bolder;
   font-size: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 @media only screen and (max-width: 1400px) {

@@ -125,15 +125,43 @@
             <br><br>
             <p class="nftMainTitle">Buy Our NFTS!</p>
             <div class="nftContainer">
-                <div id="nftLeftArrow" class="nftArrow">
+                <div id="nftLeftArrow" class="nftArrow" tabindex="0">
                     <p>&#60;</p>
                 </div>
                 <div id="nftSlideShow">
                 </div>
-                <div id="nftRightArrow"  class="nftArrow">
+                <div id="nftRightArrow"  class="nftArrow" tabindex="0">
                     <p>&#62;</p>
                 </div>
             </div>
+            <script>
+                function getRandomInt(min, max) {
+                    min = Math.ceil(min);
+                    max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
+                }
+                var barHeight = 100
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > barHeight){
+                        document.getElementsByClassName("bottomBar")[0].style.left="-"+(window.pageYOffset-barHeight)*5+"px";
+                        document.getElementsByClassName("topBar")[0].style.left=(window.pageYOffset-barHeight)*5+"px";
+                        document.getElementsByClassName("firstBlock")[0].style.top=(window.pageYOffset-barHeight)+"px";
+                    } else{
+                        document.getElementsByClassName("bottomBar")[0].style.left=0;
+                        document.getElementsByClassName("topBar")[0].style.left=0;
+                        document.getElementsByClassName("firstBlock")[0].style.top=0;
+                    }
+                }, false);
+                var charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                window.addEventListener('load', (event) => {
+                    Array.from(document.getElementsByClassName("mInitial")).forEach(function(element) {
+                        element.innerHTML=charList[getRandomInt(0, 25)];
+                    })
+                    Array.from(document.getElementsByClassName("fNum")).forEach(function(element) {
+                        element.innerHTML=getRandomInt(0, 100);
+                    })
+                });
+            </script>
             <script>
                 function initNFT(){
                     var nftRequest = new XMLHttpRequest();
@@ -179,7 +207,7 @@
                                                         <p class="nftDescr">Description:</p>
                                                         <span class="nftDescC">${element.description}</span>
                                                         <p class="nftCost">0.02 ETH, $${Math.round(0.02 * ethData[0].current_price*100)/100}</p>
-                                                        <a href="https://mintable.com/browse?other=buy_now&search=${element.token_id}" style="text-decoration:none;">
+                                                        <a href="https://mintable.com/browse?other=buy_now&search=${element.token_id}" style="text-decoration:none;" tabindex="-1">
                                                             <button class="nftButton">Buy Now!</button>
                                                         </a>
                                                     </div>
@@ -218,36 +246,30 @@
                         }
                         cardList[pickedIndex].classList.remove("d-none");
                     }, cardList);
+                    document.getElementById("nftLeftArrow").addEventListener("keypress", (event)=>{
+                        if (event.key == " " || event.key == "Enter"){
+                            cardList[pickedIndex].classList.add("d-none");
+                            if (pickedIndex == 0){
+                                pickedIndex = cardList.length - 1;
+                            } else{
+                                pickedIndex--;
+                            }
+                            cardList[pickedIndex].classList.remove("d-none");
+                        }
+                    }, cardList);
+                    document.getElementById("nftRightArrow").addEventListener("keypress", (event)=>{
+                        if (event.key == " " || event.key == "Enter"){
+                            cardList[pickedIndex].classList.add("d-none");
+                            if (pickedIndex == cardList.length - 1){
+                                pickedIndex = 0;
+                            } else{
+                                pickedIndex++;
+                            }
+                            cardList[pickedIndex].classList.remove("d-none");
+                        }
+                    }, cardList);
                 }
                 initNFT()
             </script>
         </body>
-        <script>
-            function getRandomInt(min, max) {
-                min = Math.ceil(min);
-                max = Math.floor(max);
-                return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
-            }
-            var barHeight = 100
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > barHeight){
-                    document.getElementsByClassName("bottomBar")[0].style.left="-"+(window.pageYOffset-barHeight)*5+"px";
-                    document.getElementsByClassName("topBar")[0].style.left=(window.pageYOffset-barHeight)*5+"px";
-                    document.getElementsByClassName("firstBlock")[0].style.top=(window.pageYOffset-barHeight)+"px";
-                } else{
-                    document.getElementsByClassName("bottomBar")[0].style.left=0;
-                    document.getElementsByClassName("topBar")[0].style.left=0;
-                    document.getElementsByClassName("firstBlock")[0].style.top=0;
-                }
-            }, false);
-            var charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            window.addEventListener('load', (event) => {
-                Array.from(document.getElementsByClassName("mInitial")).forEach(function(element) {
-                    element.innerHTML=charList[getRandomInt(0, 25)];
-                })
-                Array.from(document.getElementsByClassName("fNum")).forEach(function(element) {
-                    element.innerHTML=getRandomInt(0, 100);
-                })
-            });
-        </script>
     </html>

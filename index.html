@@ -33,94 +33,6 @@
                 <p class="whoDescription">We're a frat. We are a unique natural resource of local, state, and national significance that possesses a distinct natural, agricultural, and cultural heritage plus Ice Cube minus the ice. We have a love of squares and triangles. We are loud, we drink, we womanize, we haze, we get bad grades, we are arrogant, we avoid community service, we drink, we leech off our friends that we pay for, and we are arrogant. So really, who aren't we?</p>
             </div>
             <div class="pfpContainer">
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/aaronpfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Aaron <span class="mInitial"></span>. Largent</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/abbypfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Abby <span class="mInitial"></span>. Smith</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/gavinpfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Gavin <span class="mInitial"></span>. Gorrelle</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/graciepfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Gracie <span class="mInitial"></span>. Limmer</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/laydenpfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Layden <span class="mInitial"></span>. Halcomb</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/meghanpfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Meghan <span class="mInitial"></span>. Strother</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/paigepfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Paige <span class="mInitial"></span>. Warren</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
-                <div class="pfp">
-                    <div class="pfpImages">
-                        <img src="images/pfp/taylorpfp.jpg"/>
-                    </div>
-                    <div class="pfpName">
-                        <p>Taylor <span class="mInitial"></span>. Sloan</p>
-                    </div>
-                    <div class="pfpDescriptor">
-                        <p>Founding Member #<span class="fNum"></span></p>
-                    </div>
-                </div>
             </div>
             <br><br>
             <p class="nftMainTitle">Buy Our NFTS!</p>
@@ -152,13 +64,51 @@
                         document.getElementsByClassName("firstBlock")[0].style.top=0;
                     }
                 }, false);
+                imageArray=["images/pfp/aaronpfp.jpg", "images/pfp/abbypfp.jpg", "images/pfp/gavinpfp.jpg", "images/pfp/graciepfp.jpg", "images/pfp/laydenpfp.jpg", "images/pfp/meghanpfp.jpg", "images/pfp/paigepfp.jpg", "images/pfp/taylorpfp.jpg"]
+                fNameArray=["Aaron", "Abby", "Gavin", "Gracie", "Layden", "Meghan", "Paige", "Taylor"]
+                lNameArray=["Largent", "Smith", "Gorrelle", "Limmer", "Halcomb", "Strother", "Warren", "Sloan"]
+                peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
+                for (let i = 0; i<8; i++){
+                    peopleSection.insertAdjacentHTML("beforeend", `
+                        <div class="pfp">
+                            <div class="pfpImages">
+                                <img src="${imageArray[i]}"/>
+                            </div>
+                            <div class="pfpName">
+                                <p>${fNameArray[i]} <span class="mInitial"></span>. ${lNameArray[i]}</p>
+                            </div>
+                            <div class="pfpDescriptor">
+                                <p>Founding Member #<span class="fNum"></span></p>
+                            </div>
+                        </div>
+                    `);
+                }
+                imageArrayN=["images/pfp/alexpfp.jpg", "images/pfp/crispfp.jpg", "images/pfp/grantpfp.jpg"]
+                fNameArrayN=["Alexander", "Cristian", "Grant"]
+                lNameArrayN=["Miles", "Cuevas", "Booker"]
+                peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
+                for (let i = 0; i<imageArrayN.length; i++){
+                    peopleSection.insertAdjacentHTML("beforeend", `
+                        <div class="pfp">
+                            <div class="pfpImages">
+                                <img src="${imageArrayN[i]}"/>
+                            </div>
+                            <div class="pfpName">
+                                <p>${fNameArrayN[i]} <span class="mInitial"></span>. ${lNameArrayN[i]}</p>
+                            </div>
+                            <div class="pfpDescriptor">
+                                <p>Member #<span class="fNum"></span></p>
+                            </div>
+                        </div>
+                    `);
+                }
                 var charList = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
                 window.addEventListener('load', (event) => {
                     Array.from(document.getElementsByClassName("mInitial")).forEach(function(element) {
                         element.innerHTML=charList[getRandomInt(0, 25)];
                     })
                     Array.from(document.getElementsByClassName("fNum")).forEach(function(element) {
-                        element.innerHTML=getRandomInt(0, 100);
+                        element.innerHTML=getRandomInt(0, 1000);
                     })
                 });
             </script>

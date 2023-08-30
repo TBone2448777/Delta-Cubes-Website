@@ -1,94 +1,11 @@
-<!DOCTYPE html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <html>
-        <body style="background-color: #1f1f1f;">
-            <div class="nftContainer">
-                <div id="nftLeftArrow" class="nftArrow">
-                    <p>&#60;</p>
-                </div>
-                <div id="nftSlideShow">
-                </div>
-                <div id="nftRightArrow"  class="nftArrow">
-                    <p>&#62;</p>
-                </div>
-            </div>
-            <script>
-                function initNFT(){
-                    var nftRequest = new XMLHttpRequest();
-                    nftRequest.open('GET', 'https://api.mintable.app/gasless-by-address?address=0x8a03b60620b7c07939f56effdf1453a902c6bc62');
-                    nftRequest.onload = function() {
-                        if (nftRequest.status >= 200 && nftRequest.status < 400) {
-                            nftLoaded(JSON.parse(nftRequest.responseText));
-                        }
-                    }
-                    nftRequest.send();
-                }
-                function nftLoaded(nftData){
-                    var ethRequest = new XMLHttpRequest();
-                    ethRequest.open('GET', 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ethereum');
-                    ethRequest.onload = function() {
-                        if (ethRequest.status >= 200 && ethRequest.status < 400) {
-                            onDataLoad(nftData, JSON.parse(ethRequest.responseText));
-                        }
-                    }
-                    ethRequest.send();
-                }    
-                function onDataLoad(nftData, ethData){
-                    nftData.forEach(element => {
-                        anHtmlString = `<div class="nftCard">
-                                            <div class="nftLeft">
-                                                <img src="${element.preview_images}">
-                                            </div>
-                                            <div class="nftRight">
-                                                <div class="nftDetails">
-                                                    <p class="nftTitle">Collection: ${element.title}</p>
-                                                    <p class="nftSubTitle">${element.sub_title}</p>
-                                                    <p class="nftDescr">Description:</p>
-                                                    <span class="nftDescC">${element.description}</span>
-                                                    <p class="nftCost">0.02 ETH, $${Math.round(0.02 * ethData[0].current_price*100)/100}</p>
-                                                    <a href="https://mintable.com/browse?other=buy_now&search=${element.token_id}" style="text-decoration:none;">
-                                                        <button class="nftButton">Buy Now!</button>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>`;
-                        document.getElementById("nftSlideShow").insertAdjacentHTML("beforeend", anHtmlString);
-                    });
-                    genSlides();
-                }
-                function genSlides(){
-                    cardList = Array.from(document.getElementsByClassName("nftCard"));
-                    cardList.forEach(element => {
-                        element.classList.add("d-none");
-                    });
-                    cardList[0].classList.remove("d-none");
-                    arrowAdditions(cardList);
-                }
-                function arrowAdditions(){
-                    var pickedIndex = 0;
-                    document.getElementById("nftLeftArrow").addEventListener("click", ()=>{
-                        cardList[pickedIndex].classList.add("d-none");
-                        if (pickedIndex == 0){
-                            pickedIndex = cardList.length - 1;
-                        } else{
-                            pickedIndex--;
-                        }
-                        cardList[pickedIndex].classList.remove("d-none");
-                    }, cardList);
-                    document.getElementById("nftRightArrow").addEventListener("click", ()=>{
-                        console.log(cardList);
-                        cardList[pickedIndex].classList.add("d-none");
-                        if (pickedIndex == cardList.length - 1){
-                            pickedIndex = 0;
-                        } else{
-                            pickedIndex++;
-                        }
-                        cardList[pickedIndex].classList.remove("d-none");
-                    }, cardList);
-                }
-                initNFT()
-            </script>
-        </body>
-    </html>
+<div class="pfp">
+    <div class="pfpImages">
+        <img src=""/>
+    </div>
+    <div class="pfpName">
+        <p> <span class="mInitial"></span>. </p>
+    </div>
+    <div class="pfpDescriptor">
+        <p>Founding Member #<span class="fNum"></span></p>
+    </div>
+</div>

@@ -72,7 +72,7 @@
                     peopleSection.insertAdjacentHTML("beforeend", `
                         <div class="pfp">
                             <div class="pfpImages">
-                                <img src="${imageArray[i]}"/>
+                                <img src="${imageArray[i]}"  alt="Image of ${fNameArray[i]} ${lNameArray[i]}"/>
                             </div>
                             <div class="pfpName">
                                 <p>${fNameArray[i]} <span class="mInitial"></span>. ${lNameArray[i]}</p>
@@ -83,21 +83,21 @@
                         </div>
                     `);
                 }
-                imageArrayN=["images/pfp/alexpfp.jpg", "images/pfp/crispfp.jpg", "images/pfp/grantpfp.jpg", "images/pfp/alyssapfp.jpg", "images/pfp/justinpfp.jpg"]
-                fNameArrayN=["Alexander", "Cristian", "Grant", "Alyssa", "Justin"]
-                lNameArrayN=["Miles", "Cuevas", "Booker", "Freimanis", "Kroh"]
+                imageArrayN=["alex", "cris", "grant", "alyssa", "justin", "emely", "kea", "serenity", "bishop"]
+                fNameArrayN=["Alexander", "Cristian", "Grant", "Alyssa", "Justin", "Emely", "Kea", "Serenity", "Bishop"]
+                lNameArrayN=["Miles", "Cuevas", "Booker", "Freimanis", "Kroh", "Aparicio", "Yeh", "Sosa", "Markham"]
                 peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
                 for (let i = 0; i<imageArrayN.length; i++){
                     peopleSection.insertAdjacentHTML("beforeend", `
                         <div class="pfp">
                             <div class="pfpImages">
-                                <img src="${imageArrayN[i]}"/>
+                                <img src="images/pfp/${imageArrayN[i]}pfp.jpg" alt="Image of ${fNameArrayN[i]} ${lNameArrayN[i]}"/>
                             </div>
                             <div class="pfpName">
                                 <p>${fNameArrayN[i]} <span class="mInitial"></span>. ${lNameArrayN[i]}</p>
                             </div>
                             <div class="pfpDescriptor">
-                                <p>Member #<span class="fNum"></span></p>
+                                <p>Member #<span class="fNumTwo"></span></p>
                             </div>
                         </div>
                     `);
@@ -108,7 +108,10 @@
                         element.innerHTML=charList[getRandomInt(0, 25)];
                     })
                     Array.from(document.getElementsByClassName("fNum")).forEach(function(element) {
-                        element.innerHTML=getRandomInt(0, 1000);
+                        element.innerHTML=getRandomInt(0, 100);
+                    })
+                    Array.from(document.getElementsByClassName("fNumTwo")).forEach(function(element) {
+                        element.innerHTML=getRandomInt(100, 1000);
                     })
                 });
             </script>

@@ -64,15 +64,15 @@
                         document.getElementsByClassName("firstBlock")[0].style.top=0;
                     }
                 }, false);
-                imageArray=["images/pfp/aaronpfp.jpg", "images/pfp/abbypfp.jpg", "images/pfp/gavinpfp.jpg", "images/pfp/graciepfp.jpg", "images/pfp/laydenpfp.jpg", "images/pfp/meghanpfp.jpg", "images/pfp/paigepfp.jpg", "images/pfp/taylorpfp.jpg"]
+                imageArray=["aaron", "abby", "gavin", "gracie", "layden", "meghan", "paige", "taylor"]
                 fNameArray=["Aaron", "Abby", "Gavin", "Gracie", "Layden", "Meghan", "Paige", "Taylor"]
-                lNameArray=["Largent", "Smith", "Gorrelle", "Limmer", "Halcomb", "Strother", "Warren", "Sloan"]
+                lNameArray=["Largent", "Smith", "Gorrell", "Limmer", "Halcomb", "Strother", "Warren", "Sloan"]
                 peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
                 for (let i = 0; i<8; i++){
                     peopleSection.insertAdjacentHTML("beforeend", `
                         <div class="pfp">
                             <div class="pfpImages">
-                                <img src="${imageArray[i]}"  alt="Image of ${fNameArray[i]} ${lNameArray[i]}"/>
+                                <img src="images/pfp/${imageArray[i]}pfp.jpg"  alt="Image of ${fNameArray[i]} ${lNameArray[i]}"/>
                             </div>
                             <div class="pfpName">
                                 <p>${fNameArray[i]} <span class="mInitial"></span>. ${lNameArray[i]}</p>

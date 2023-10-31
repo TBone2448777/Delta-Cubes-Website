@@ -1,4 +1,4 @@
-window.addEventListener("load", ()=>{
+window.addEventListener("DOMContentLoaded", function () {
     function getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);

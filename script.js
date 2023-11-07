@@ -67,7 +67,7 @@ window.addEventListener("DOMContentLoaded", function () {
         })
     });
     function initNFT(){
-        var nftRequest = newttpRequest();
+        var nftRequest = new XMLHttpRequest();
         nftRequest.open('GET', 'https://api.mintable.app/gasless-by-address?address=0x8a03b60620b7c07939f56effdf1453a902c6bc62');
         nftRequest.onload = function() {
             if (nftRequest.status >= 200 && nftRequest.status < 400) {

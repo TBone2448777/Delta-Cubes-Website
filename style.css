@@ -1,24 +1,51 @@
 body {
   background-color: #1f1f1f;
+  overflow-x: hidden;
+}
+
+.d-none {
+  display: none !important;
 }
 
 .sliderBars {
   width: 100%;
   background-color: #000030;
-  height: 50vh;
   position: fixed;
   z-index: 999;
+  font-size: 200px;
+  color: white;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
+  text-align: center;
 }
 .sliderBars.topBar {
+  height: 50lvh;
   background-image: url("images/denim.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 50vh;
+}
+.sliderBars.topBar p {
+  margin: 0;
 }
 .sliderBars.bottomBar {
+  height: 50lvh;
   background-image: url("images/circuit board.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: fixed;
+  bottom: 0px;
+}
+.sliderBars.bottomBar p {
+  margin: 0;
 }
 
 .firstBlockContainer {
   position: relative;
-  height: 150vh;
+  height: 150lvh;
   width: 100%;
   left: 0;
   overflow: hidden;
@@ -28,24 +55,29 @@ body {
   position: absolute;
   top: 0;
   width: 100%;
+  height: 100lvh;
 }
 .firstBlockContainer .firstBlock .left {
-  height: 100vh;
+  height: 100lvh;
   width: 50%;
 }
 .firstBlockContainer .firstBlock .right {
-  height: 100vh;
+  height: 100lvh;
   width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .firstBlockContainer .firstBlock .top {
   width: 100%;
-  height: 50vh;
+  height: 50lvh;
   position: relative;
   display: flex;
 }
 .firstBlockContainer .firstBlock .bottom {
   width: 100%;
-  height: 50vh;
+  height: 50lvh;
   position: relative;
   display: flex;
 }
@@ -55,26 +87,234 @@ body {
   display: flex;
   margin: 0px;
 }
+.firstBlockContainer .firstBlock .theCube {
+  width: 80%;
+}
 
+.pfpContainer {
+  text-align: center;
+}
+.pfpContainer .pfp {
+  margin: 30px 1% 30px 0;
+  width: 23.5%;
+  display: inline-block;
+}
+.pfpContainer .pfp .pfpImages img {
+  width: 100%;
+}
+.pfpContainer .pfp .pfpName {
+  text-align: center;
+  color: white;
+  font-family: Arial;
+  font-size: 25px;
+}
+.pfpContainer .pfp .pfpDescriptor {
+  text-align: center;
+  color: white;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.whoContainer {
+  color: white;
+  text-align: center;
+  font-family: arial;
+}
+.whoContainer .whoHeader {
+  font-size: 50px;
+  margin: 10px;
+}
+.whoContainer .whoDescription {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.nftMainTitle {
+  color: white;
+  text-align: center;
+  font-family: arial;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.nftContainer {
+  cursor: default;
+  width: calc(100% - 32px);
+  height: 50vh;
+  background-color: gray;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+.nftContainer #nftSlideShow {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.nftContainer #nftSlideShow .nftCard {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftLeft {
+  width: 53%;
+  height: 100%;
+  padding-right: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nftContainer #nftSlideShow .nftCard .nftLeft img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight {
+  width: 43%;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight img {
+  width: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails p {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftTitle {
+  font-size: 16px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftSubTitle {
+  font-size: 32px;
+  font-weight: bold;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftDescr {
+  font-size: 14px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftDescC {
+  flex-grow: 1;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails .nftCost {
+  font-size: 40px;
+  text-align: right;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails a {
+  align-self: flex-end;
+  width: -moz-max-content;
+  width: max-content;
+  height: -moz-min-content;
+  height: min-content;
+  margin-bottom: 10px;
+}
+.nftContainer #nftSlideShow .nftCard .nftRight .nftDetails a .nftButton {
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-weight: bold;
+}
+.nftContainer .nftArrow {
+  width: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bolder;
+  font-size: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+@media only screen and (max-width: 1400px) {
+  .sliderBars {
+    font-size: 125px;
+    -webkit-text-stroke-width: 2px;
+  }
+}
 @media only screen and (max-width: 800px) {
+  .nftContainer {
+    min-height: 75vh;
+  }
+  .nftContainer #nftSlideShow .nftCard {
+    flex-direction: column;
+  }
+  .nftContainer #nftSlideShow .nftCard .nftLeft {
+    height: 50%;
+    width: 100%;
+  }
+  .nftContainer #nftSlideShow .nftCard .nftRight {
+    height: 50%;
+    width: 100%;
+  }
+  .firstBlockContainer .firstBlock {
+    display: flex;
+    flex-direction: column;
+  }
   .firstBlockContainer .firstBlock .left {
-    height: 50vh;
+    height: 25lvh;
     width: 100%;
   }
   .firstBlockContainer .firstBlock .right {
-    height: 50vh;
+    height: 75lvh;
     width: 100%;
   }
   .firstBlockContainer .firstBlock .top {
     width: 100%;
-    height: 25vh;
+    height: 25lvh;
     position: relative;
     justify-content: center;
   }
   .firstBlockContainer .firstBlock .bottom {
     width: 100%;
-    height: 25vh;
+    height: 25lvh;
     position: relative;
     justify-content: center;
+  }
+  .firstBlockContainer .firstBlock .theCube {
+    width: 65%;
+  }
+  .sliderBars {
+    font-size: 95px;
+    -webkit-text-stroke-width: 2px;
+  }
+  .sliderBars.topBar {
+    height: 50lvh;
+    bottom: 50lvh;
+  }
+  .sliderBars.bottomBar {
+    height: 50lvh;
+    bottom: 0lvh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .firstBlockContainer .firstBlock .theCube {
+    width: 100%;
+  }
+  .sliderBars {
+    font-size: 68px;
+    -webkit-text-stroke-width: 1px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .pfpContainer {
+    text-align: center;
+  }
+  .pfpContainer .pfp {
+    margin: 30px 1% 30px 0;
+    width: 45%;
+    display: inline-block;
+  }
+  .pfpContainer .pfp .pfpName {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

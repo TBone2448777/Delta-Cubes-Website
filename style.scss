@@ -2,48 +2,79 @@
 
 body{
     background-color: #1f1f1f;
+    overflow-x: hidden;
+}
+.d-none{
+    display: none!important;
 }
 .sliderBars{
     width: 100%;
     background-color: #000030;
-    height: 50vh;
     position: fixed;
     z-index: 999;
+    font-size: 200px;
+    color: white;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+    text-align: center;
     &.topBar{
+        height: 50lvh;
         background-image: url("images/denim.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: fixed;
+        bottom: 50vh;
+        p{
+            margin: 0;
+        }
     }
     &.bottomBar{
+        height: 50lvh;
         background-image: url("images/circuit board.jpg");
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        position: fixed;
+        bottom: 0px;
+        p{
+            margin: 0;
+        }
     }
 }
 .firstBlockContainer{
     position:relative;
-    height: 150vh;
-    width:100%;
+    height: 150lvh;
+    width: 100%;
     left:0;
     overflow: hidden;
     .firstBlock{
         background-color: #636363;
-        position:absolute;
+        position: absolute;
         top:0;
         width:100%;
+        height: 100lvh;
         .left{
-            height: 100vh;
+            height: 100lvh;
             width:50%;
         }
         .right{
-            height: 100vh;
+            height: 100lvh;
             width:50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .top{
             width: 100%;
-            height: 50vh;
+            height: 50lvh;
             position: relative;
             display: flex;
         }
         .bottom{
             width: 100%;
-            height: 50vh;
+            height: 50lvh;
             position: relative;
             display: flex;
         }
@@ -53,31 +84,237 @@ body{
             display: flex;
             margin: 0px;
         }
+        .theCube{
+            width:80%;
+        }
+    }
+}
+.pfpContainer{
+    text-align: center;
+    .pfp{
+        margin: 30px 1% 30px 0;
+        width: 23.5%;
+        display: inline-block;
+        .pfpImages{
+            img{
+                width: 100%;
+            }
+        }
+        .pfpName{
+            text-align: center;
+            color: white;
+            font-family: Arial;
+            font-size: 25px;
+        }
+        .pfpDescriptor{
+            text-align: center;
+            color: white;
+            font-family: Arial;
+            font-size: 17px;
+        }
+    }
+}
+.whoContainer{
+    color: white;
+    text-align: center;
+    font-family: arial;
+    .whoHeader{
+        font-size: 50px;
+        margin: 10px;
+    }
+    .whoDescription{
+        font-size: 20px;
+        margin: 10px;
+    }
+}
+.nftMainTitle{
+    color: white;
+    text-align: center;
+    font-family: arial;
+    font-size: 50px;
+    margin: 10px;
+}
+.nftContainer{
+    cursor: default;
+    width: calc(100% - 32px);
+    height: 50vh;
+    background-color: gray;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    #nftSlideShow{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        .nftCard{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            .nftLeft{
+                width: 53%;
+                height: 100%;
+                padding-right: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+            .nftRight{
+                width: 43%;
+                height: 100%;
+                img{
+                    width: 100%;
+                }
+                .nftDetails{
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    p{
+                        margin-bottom: 0;
+                        margin-top: 10px;
+                    }
+                    .nftTitle{
+                        font-size: 16px;
+                    }
+                    .nftSubTitle{
+                        font-size: 32px;
+                        font-weight: bold;
+                    }
+                    .nftDescr{
+                        font-size: 14px;
+                    }
+                    .nftDescC{
+                        flex-grow: 1;
+                    }
+                    .nftCost{
+                        font-size: 40px;
+                        text-align: right;
+                    }
+                    a{
+                        align-self: flex-end;
+                        width: max-content;
+                        height: min-content;
+                        margin-bottom: 10px;
+                        .nftButton{
+                            cursor: pointer;
+                            background-color: #1f1f1f;
+                            color: white;
+                            border: 1px black solid;
+                            border-radius: 5px;
+                            padding: 10px 30px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .nftArrow{
+        width: 2%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bolder;
+        font-size: 30px;
+        user-select: none;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .sliderBars{
+        font-size: 125px;
+        -webkit-text-stroke-width: 2px;
     }
 }
 @media only screen and (max-width: 800px) {
+    .nftContainer{
+        min-height: 75vh;
+        #nftSlideShow{
+            .nftCard{
+                flex-direction: column;
+                .nftLeft{
+                    height: 50%;
+                    width: 100%;
+                }
+                .nftRight{
+                    height: 50%;
+                    width: 100%;
+                }
+            }
+        }
+    }
     .firstBlockContainer {
         .firstBlock{
+            display: flex;
+            flex-direction: column;
             .left{
-                height: 50vh;
+                height: 25lvh;
                 width:100%;
             }
             .right{
-                height: 50vh;
+                height: 75lvh;
                 width:100%;
             }
             .top{
                 width: 100%;
-                height: 25vh;
+                height: 25lvh;
                 position: relative;
                 justify-content: center;
             }
             .bottom{
                 width: 100%;
-                height: 25vh;
+                height: 25lvh;
                 position: relative;
                 justify-content: center;
             }
+            .theCube{
+                width:65%;
+            }
         }
     }
-  }
+    .sliderBars{
+        font-size: 95px;
+        -webkit-text-stroke-width: 2px;
+        &.topBar{
+            height: 50lvh;
+            bottom: 50lvh;
+        }
+        &.bottomBar{
+            height: 50lvh;
+            bottom: 0lvh;
+        }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .firstBlockContainer {
+        .firstBlock{
+            .theCube{
+                width:100%;
+            }
+        }
+    }
+    .sliderBars{
+        font-size: 68px;
+        -webkit-text-stroke-width: 1px;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .pfpContainer{
+        text-align: center;
+        .pfp{
+            margin: 30px 1% 30px 0;
+            width: 45%;
+            display: inline-block;
+            .pfpName{
+                font-size: 18px;
+            }
+        }
+    }
+}

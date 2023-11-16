@@ -3,11 +3,16 @@
         <title>Delta Cubes</title>
         <link rel="icon" type="image/x-icon" href="images/favicon.png">
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <html>
+    <html style="height: 100%;">
         <body>
-            <div class="sliderBars topBar" style="top:0; left:0;"></div>
-            <div class="sliderBars bottomBar" style="bottom:0; left:0;"></div>
+            <div class="sliderBars topBar" style="left:0;">
+                <p>Lots of money,</p>
+            </div>
+            <div class="sliderBars bottomBar" style="left:0;">
+                <p>high dues!</p>
+            </div>
             <div class="firstBlockContainer">
                 <div class="firstBlock" style="display: flex;">
                     <div class="left">
@@ -16,20 +21,31 @@
                         </div>
                         <div class="bottom">
                             <h1 style="position: absolute; top:0;">CUBES</h1>
-                        </div>>
+                        </div>
                     </div>
                     <div class="right">
-                        <img src="images/theCube.svg"/>
+                        <img src="images/theCube.svg" class="theCube"/>
                     </div>
-                </div> 
-            </div> 
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+            <div class="whoContainer">
+                <p class="whoHeader">Who are the Delta Cubes?</p>
+                <p class="whoDescription">We're a frat. We are a unique natural resource of local, state, and national significance that possesses a distinct natural, agricultural, and cultural heritage plus Ice Cube minus the ice. We have a love of squares and triangles. We are loud, we drink, we womanize, we haze, we get bad grades, we are arrogant, we avoid community service, we drink, we leech off our friends that we pay for, and we are arrogant. So really, who aren't we?</p>
+            </div>
+            <div class="pfpContainer">
+            </div>
+            <br><br>
+            <p class="nftMainTitle">Buy Our NFTS!</p>
+            <div class="nftContainer">
+                <div id="nftLeftArrow" class="nftArrow" tabindex="0">
+                    <p>&#60;</p>
+                </div>
+                <div id="nftSlideShow">
+                </div>
+                <div id="nftRightArrow"  class="nftArrow" tabindex="0">
+                    <p>&#62;</p>
+                </div>
+            </div>
+            <script type="text/javascript" src="script.js"></script>
         </body>
     </html>
-    <script>
-        window.addEventListener('scroll', () => {
-            document.getElementsByClassName("bottomBar")[0].style.left="-"+window.pageYOffset*5+"px";
-            document.getElementsByClassName("topBar")[0].style.left=window.pageYOffset*5+"px";
-            document.getElementsByClassName("firstBlock")[0].style.top=window.pageYOffset+"px";
-        }, false);
-    </script>

@@ -35,9 +35,9 @@ window.addEventListener("DOMContentLoaded", function () {
             </div>
         `);
     }
-    imageArrayN=["alex",      "cris",     "grant",  "alyssa",    "justin", "emely",          "kea", "serenity", "bishop",  "raven", "jeremiah", "jansen",    "lexi",   "trevor", "wubi",    "daniel", "seb",      "lauren",    "emma",   "max",        "ewa"]
-    fNameArrayN=["Alexander", "Cristian", "Grant",  "Alyssa",    "Justin", "Emely",          "Kea", "Serenity", "Bishop",  "Raven", "Jeremiah", "Jansen",    "Alexia", "Trevor", "Wubi",    "Daniel", "Seb",      "Lauren",    "Emma",   "Maximilian", "Ewa"]
-    lNameArrayN=["Miles",     "Cuevas",   "Booker", "Freimanis", "Kroh",   "Solis Aparicio", "Yeh", "Sosa",     "Markham", "Haney", "Jones",    "Breshears", "Bowlen", "Blair",  "Halefom", "Gaitan", "Gonzalez", "Fergerson", "Eubank", "Johnson",    "Samberger"]
+    imageArrayN=["alex",      "cris",     "grant",  "alyssa",    "justin", "emely",          "kea", "serenity", "bishop",  "raven", "jeremiah", "jansen",    "lexi",   "trevor", "wubi",    "daniel", "seb",      "lauren",    "emma",   "max",        "ewa",       "mccleary"]
+    fNameArrayN=["Alexander", "Cristian", "Grant",  "Alyssa",    "Justin", "Emely",          "Kea", "Serenity", "Bishop",  "Raven", "Jeremiah", "Jansen",    "Alexia", "Trevor", "Wubi",    "Daniel", "Seb",      "Lauren",    "Emma",   "Maximilian", "Ewa",       "McCleary"]
+    lNameArrayN=["Miles",     "Cuevas",   "Booker", "Freimanis", "Kroh",   "Solis Aparicio", "Yeh", "Sosa",     "Markham", "Haney", "Jones",    "Breshears", "Bowlen", "Blair",  "Halefom", "Gaitan", "Gonzalez", "Fergerson", "Eubank", "Johnson",    "Samberger", "Stark"]
     peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
     for (let i = 0; i<imageArrayN.length; i++){
         peopleSection.insertAdjacentHTML("beforeend", `

@@ -35,9 +35,9 @@ window.addEventListener("DOMContentLoaded", function () {
             </div>
         `);
     }
-    imageArrayN=["alex",      "cris",     "grant",  "alyssa",    "justin", "emely",          "kea", "serenity", "bishop",  "raven", "jeremiah", "jansen",    "lexi",   "trevor", "wubi",    "daniel", "seb",      "lauren",    "emma",   "max",        "ewa",       "mccleary", "clayton",   "justin2"]
-    fNameArrayN=["Alexander", "Cristian", "Grant",  "Alyssa",    "Justin", "Emely",          "Kea", "Serenity", "Bishop",  "Raven", "Jeremiah", "Jansen",    "Alexia", "Trevor", "Wubi",    "Daniel", "Seb",      "Lauren",    "Emma",   "Maximilian", "Ewa",       "McCleary", "Clayton",   "Justin"]
-    lNameArrayN=["Miles",     "Cuevas",   "Booker", "Freimanis", "Kroh",   "Solis Aparicio", "Yeh", "Sosa",     "Markham", "Haney", "Jones",    "Breshears", "Bowlen", "Blair",  "Halefom", "Gaitan", "Gonzalez", "Fergerson", "Eubank", "Johnson",    "Samberger", "Stark",    "Robertson", "Basler"]
+    imageArrayN=["alex",      "cris",     "grant",  "alyssa",    "justin", "emely",          "kea", "serenity", "bishop",  "raven", "jeremiah", "jansen",    "lexi",   "trevor", "wubi",    "daniel", "seb",      "lauren",    "emma",   "max",        "ewa",       "mccleary", "clayton",   "justin2", "khania"]
+    fNameArrayN=["Alexander", "Cristian", "Grant",  "Alyssa",    "Justin", "Emely",          "Kea", "Serenity", "Bishop",  "Raven", "Jeremiah", "Jansen",    "Alexia", "Trevor", "Wubi",    "Daniel", "Seb",      "Lauren",    "Emma",   "Maximilian", "Ewa",       "McCleary", "Clayton",   "Justin",  "Khania"]
+    lNameArrayN=["Miles",     "Cuevas",   "Booker", "Freimanis", "Kroh",   "Solis Aparicio", "Yeh", "Sosa",     "Markham", "Haney", "Jones",    "Breshears", "Bowlen", "Blair",  "Halefom", "Gaitan", "Gonzalez", "Fergerson", "Eubank", "Johnson",    "Samberger", "Stark",    "Robertson", "Basler",  "Clark"]
     peopleSection = Array.from(document.getElementsByClassName("pfpContainer"))[0]
     for (let i = 0; i<imageArrayN.length; i++){
         peopleSection.insertAdjacentHTML("beforeend", `
